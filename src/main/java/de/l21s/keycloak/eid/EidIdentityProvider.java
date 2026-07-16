@@ -29,7 +29,9 @@ public class EidIdentityProvider extends AbstractIdentityProvider<EidIdentityPro
 
   @Override
   public Object callback(
-      RealmModel realm, IdentityProvider.AuthenticationCallback callback, EventBuilder event) {
+      RealmModel realm,
+      UserAuthenticationIdentityProvider.AuthenticationCallback callback,
+      EventBuilder event) {
     return new EidSamlResponseHandler(
         realm, session, callback, event, this, config, new SamlResponseHandlerFactoryImpl());
   }

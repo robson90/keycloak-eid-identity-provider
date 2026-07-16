@@ -1,7 +1,5 @@
 package de.l21s.keycloak.eid.configuration;
 
-import static org.keycloak.broker.provider.IdentityProvider.AuthenticationCallback;
-
 import de.bund.bsi.eid240.PersonalDataType;
 import de.governikus.panstar.sdk.saml.exception.SamlAuthenticationException;
 import de.governikus.panstar.sdk.saml.exception.UnsuccessfulSamlAuthenticationProcessException;
@@ -16,6 +14,7 @@ import jakarta.ws.rs.core.UriInfo;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.ArrayUtils;
 import org.keycloak.broker.provider.BrokeredIdentityContext;
+import org.keycloak.broker.provider.UserAuthenticationIdentityProvider;
 import org.keycloak.events.EventBuilder;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
@@ -29,7 +28,7 @@ public class EidSamlResponseHandler {
 
   private static final Logger logger = LoggerFactory.getLogger(EidSamlResponseHandler.class);
   private final KeycloakSession session;
-  private final AuthenticationCallback callback;
+  private final UserAuthenticationIdentityProvider.AuthenticationCallback callback;
   private final EventBuilder event;
   private final EidIdentityProvider eidIdentityProvider;
   private final EidIdentityProviderModel eidIdentityProviderConfig;
@@ -39,7 +38,7 @@ public class EidSamlResponseHandler {
   public EidSamlResponseHandler(
       RealmModel realm,
       KeycloakSession session,
-      AuthenticationCallback callback,
+      UserAuthenticationIdentityProvider.AuthenticationCallback callback,
       EventBuilder event,
       EidIdentityProvider eidIdentityProvider,
       EidIdentityProviderModel eidIdentityProviderConfig,

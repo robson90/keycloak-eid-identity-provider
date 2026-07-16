@@ -9,14 +9,14 @@
     <version>0.1.0</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <lombok.version>1.18.30</lombok.version>
 
-        <keycloak.version>25.0.0</keycloak.version>
+        <keycloak.version>26.6.4</keycloak.version>
 
         <panstar-sdk.version>4.1.0</panstar-sdk.version>
         <fmt-maven.version>2.22.1</fmt-maven.version>
@@ -24,10 +24,11 @@
         <nimbus-jose-jwt.version>9.37.3</nimbus-jose-jwt.version>
 
         <!-- test dependencies -->
-        <junit-jupiter.version>5.9.1</junit-jupiter.version>
+        <junit.version>6.0.3</junit.version>
+        <junit.platform.version>6.0.3</junit.platform.version>
         <mockito.version>5.11.0</mockito.version>
         <testcontainers.version>1.19.7</testcontainers.version>
-        <testcontainers-keycloak.version>3.3.0</testcontainers-keycloak.version>
+        <testcontainers-keycloak.version>4.1.1</testcontainers-keycloak.version>
 
         <!-- version conflicts (these are the versions used by the current keycloak version) -->
         <jackson.version>2.15.2</jackson.version>
@@ -43,7 +44,7 @@
 
         <!--plugins -->
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-        <maven-surefire-plugin.version>3.2.5</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.5</maven-surefire-plugin.version>
         <maven-shade-plugin.version>3.5.2</maven-shade-plugin.version>
     </properties>
 
@@ -262,12 +263,30 @@
             </dependency>
 
             <!-- test dependencies -->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-api</artifactId>
-                <version>${junit-jupiter.version}</version>
-                <scope>test</scope>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.junit.jupiter</groupId>-->
+<!--                <artifactId>junit-jupiter-api</artifactId>-->
+<!--                <version>${junit.version}</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.junit.jupiter</groupId>-->
+<!--                <artifactId>junit-jupiter</artifactId>-->
+<!--                <version>${junit.version}</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.junit.jupiter</groupId>-->
+<!--                <artifactId>junit-jupiter-engine</artifactId>-->
+<!--                <version>${junit.version}</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.junit.platform</groupId>-->
+<!--                <artifactId>junit-platform-launcher</artifactId>-->
+<!--                <version>${junit.platform.version}</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
@@ -336,6 +355,18 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>

@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.keycloak.broker.provider.AuthenticationRequest;
-import org.keycloak.broker.provider.IdentityProvider;
+import org.keycloak.broker.provider.UserAuthenticationIdentityProvider;
 import org.keycloak.broker.provider.util.IdentityBrokerState;
 import org.keycloak.events.EventBuilder;
 import org.keycloak.http.HttpRequest;
@@ -136,8 +136,8 @@ public class EidIdentityProviderUnitTest {
     KeycloakSession session = mock(KeycloakSession.class);
     EidIdentityProviderModel config = mock(EidIdentityProviderModel.class);
     RealmModel realm = mock(RealmModel.class);
-    IdentityProvider.AuthenticationCallback callback =
-        mock(IdentityProvider.AuthenticationCallback.class);
+    UserAuthenticationIdentityProvider.AuthenticationCallback callback =
+        mock(UserAuthenticationIdentityProvider.AuthenticationCallback.class);
     EventBuilder event = mock(EventBuilder.class);
     EidIdentityProvider sut = new EidIdentityProvider(session, config);
 

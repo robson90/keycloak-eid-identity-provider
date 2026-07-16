@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.keycloak.broker.provider.BrokeredIdentityContext;
-import org.keycloak.broker.provider.IdentityProvider;
+import org.keycloak.broker.provider.UserAuthenticationIdentityProvider;
 import org.keycloak.events.EventBuilder;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
@@ -33,12 +33,13 @@ public class EidSamlResponseHandlerUnitTest {
     // given a valid SAML Response
     RealmModel realm = mock(RealmModel.class);
     KeycloakSession session = mock(KeycloakSession.class);
-    IdentityProvider.AuthenticationCallback callback =
-        mock(IdentityProvider.AuthenticationCallback.class);
+    UserAuthenticationIdentityProvider.AuthenticationCallback callback =
+        mock(UserAuthenticationIdentityProvider.AuthenticationCallback.class);
     EventBuilder event = mock(EventBuilder.class);
     EidIdentityProvider eidIdentityProvider = mock(EidIdentityProvider.class);
     EidIdentityProviderModel eidIdentityProviderConfig =
         Mockito.mock(EidIdentityProviderModel.class);
+    Mockito.when(eidIdentityProviderConfig.isEnabled()).thenReturn(true);
     UriInfo uriInfo = mock(UriInfo.class);
     URI uri = mock(URI.class);
     AuthenticationSessionProvider authSessionprovider = mock(AuthenticationSessionProvider.class);
@@ -51,6 +52,7 @@ public class EidSamlResponseHandlerUnitTest {
 
     String workDir = new File("src/test/resources").getAbsolutePath();
     HashMap<String, String> modelConfigMap = new HashMap<>();
+    modelConfigMap.put(EidIdentityProviderModel.ENABLED, "true");
     modelConfigMap.put("responseReceiverRealm", "master");
     modelConfigMap.put("samlEntityBaseUrl", "https://localhost:8443");
     modelConfigMap.put("idPanstarServerUrl", "https://dev.id.governikus-eid.de/gov_autent/async");
