@@ -14,6 +14,8 @@ import org.keycloak.events.EventBuilder;
 import org.keycloak.models.FederatedIdentityModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
+import org.keycloak.models.UserModel;
+import org.keycloak.models.UserSessionModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -87,6 +89,15 @@ public class EidIdentityProvider extends AbstractIdentityProvider<EidIdentityPro
   public Response retrieveToken(
       KeycloakSession keycloakSession, FederatedIdentityModel federatedIdentityModel) {
     return Response.ok(federatedIdentityModel.getToken()).type(MediaType.APPLICATION_JSON).build();
+  }
+
+  @Override
+  public Response retrieveToken(
+      KeycloakSession session,
+      FederatedIdentityModel identity,
+      UserSessionModel userSession,
+      UserModel user) {
+    return Response.ok(identity.getToken()).type(MediaType.APPLICATION_JSON).build();
   }
 
   @Override
