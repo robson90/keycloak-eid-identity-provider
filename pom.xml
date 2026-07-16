@@ -37,7 +37,7 @@
         <guava.version>32.0.0-jre</guava.version>
         <xmlsec.version>4.0.4</xmlsec.version>
         <bouncycastle.version>1.74</bouncycastle.version>
-        <jakarta-xml-bind-api.version>4.0.0</jakarta-xml-bind-api.version>
+        <jakarta-xml-bind-api.version>4.0.5</jakarta-xml-bind-api.version>
         <jakarta-xml-soap-api.version>3.0.0</jakarta-xml-soap-api.version>
         <jakarta-activation-api.version>2.1.2</jakarta-activation-api.version>
         <slf4j-api.version>2.0.6</slf4j-api.version>
