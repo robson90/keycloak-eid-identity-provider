@@ -33,7 +33,7 @@
         <!-- version conflicts (these are the versions used by the current keycloak version) -->
         <jackson.version>2.15.2</jackson.version>
         <bytebuddy.version>1.14.7</bytebuddy.version>
-        <commons-codec.version>1.16.0</commons-codec.version>
+        <commons-codec.version>1.22.0</commons-codec.version>
         <guava.version>32.0.0-jre</guava.version>
         <xmlsec.version>4.0.4</xmlsec.version>
         <bouncycastle.version>1.74</bouncycastle.version>
