@@ -29,4 +29,4 @@ updates:
       time: "05:00"
     assignees:
       - "robson90"
-    open-pull-requests-limit: 10
+    open-pull-requests-limit: 25
