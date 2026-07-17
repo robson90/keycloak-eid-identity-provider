@@ -34,7 +34,7 @@
         <jackson.version>2.18.9</jackson.version>
         <bytebuddy.version>1.18.11</bytebuddy.version>
         <commons-codec.version>1.22.0</commons-codec.version>
-        <guava.version>32.0.0-jre</guava.version>
+        <guava.version>33.6.0-jre</guava.version>
         <xmlsec.version>4.0.4</xmlsec.version>
         <bouncycastle.version>1.85</bouncycastle.version>
         <jakarta-xml-bind-api.version>4.0.5</jakarta-xml-bind-api.version>
