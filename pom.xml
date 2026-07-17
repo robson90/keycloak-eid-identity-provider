@@ -28,7 +28,7 @@
         <junit.platform.version>6.0.3</junit.platform.version>
         <mockito.version>5.23.0</mockito.version>
         <testcontainers.version>1.19.7</testcontainers.version>
-        <testcontainers-keycloak.version>4.1.1</testcontainers-keycloak.version>
+        <testcontainers-keycloak.version>4.3.0</testcontainers-keycloak.version>
 
         <!-- version conflicts (these are the versions used by the current keycloak version) -->
         <jackson.version>2.18.9</jackson.version>
