@@ -31,7 +31,7 @@
         <testcontainers-keycloak.version>4.3.0</testcontainers-keycloak.version>
 
         <!-- version conflicts (these are the versions used by the current keycloak version) -->
-        <jackson.version>2.18.9</jackson.version>
+        <jackson.version>2.18.11</jackson.version>
         <bytebuddy.version>1.18.11</bytebuddy.version>
         <commons-codec.version>1.22.0</commons-codec.version>
         <guava.version>33.6.0-jre</guava.version>
